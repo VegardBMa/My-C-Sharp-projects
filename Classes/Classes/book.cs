@@ -4,45 +4,61 @@ using System.Text;
 
 namespace Classes
 {
-    class Color
+    class Book
     {
+        private string title;
+        private string author;
+        private int pages;
+        private int wordCount;
 
-        int red = 60;
-        int green = 20;
-        int blue = 40;
-        int alpha = 255;
-
-        private Color(int red, int green, int blue, int alpha)
+        public Book(string title, string author, int pages, int wordCount)
         {
-            this.red = red;
-            this.green = green;
-            this.blue = blue;
-            this.alpha = alpha;
+            this.title = title;
+            this.author = author;
+            this.pages = pages;
+            this.wordCount = wordCount;
         }
 
-        public int GetColor()
+       
+        
+        public string GetTitle()
         {
-            return red;
+            return title;
         }
-
-        public void SetColor(int red)
+        public void SetTitle(string title)
         {
-            this.red = red;
-        }
-
-
-
-
-        static void Main(string[] args)
-        {
-                   
+            this.title = title;
         }
 
 
+        public string GetAuthor()
+        {
+            return author;
+        }
+        public void SetAuthor(string author)
+        {
+            this.author = author;
+        }
 
 
+        public string GetPages()
+        {
+            return title;
+        }
+        public void SetPages(int pages)
+        {
+            this.pages = pages;
+        }
 
-   }
+
+        public void AssignWordCountFromText(string text)
+        {
+            wordCount = text.Split(' ').Length;
+        }
 
 
+        
+
+
+    }
 }
